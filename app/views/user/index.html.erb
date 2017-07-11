@@ -3,7 +3,10 @@
 <h1>Users</h1>
 
 <div class = "container">
-   
+   <div id="paginator">
+<%= paginate @users  %> 
+</div>
+
 
 
 <table class = "table table-striped">
@@ -12,6 +15,7 @@
       <th>First Name </th>
       <th>Last Name </th>
       <th>email </th>
+      <th> Phone </th>
       <th>Status </th>
       <th> Level </th>
       <th> Details </th>
@@ -27,6 +31,7 @@
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
         <td><%= user.email %></td>
+        <td> <%= user.phone %> </td>
         <td><%= user.status %></td>
           <td><%= user.level %></td>
             <td><%= user.comments %></td>
@@ -38,7 +43,6 @@
   </tbody>
 </table>
 
-<br>
 
 <div>
  
