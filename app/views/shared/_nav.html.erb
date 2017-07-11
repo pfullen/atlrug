@@ -1,0 +1,26 @@
+<ul class="custom-nav nav nav-tabs">
+				<li  %> 
+					<%= link_to "Home", root_path %>
+					
+				</li>
+
+				
+									
+				
+				
+				<li class="dropdown pull-right">
+					 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown<strong class="caret"></strong></a>
+					<ul class="dropdown-menu">
+						<li>
+						<%= link_to "Edit My Profile", edit_user_registration_path %>
+						</li>
+
+						<li>
+					    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+						</li>
+						
+						</li>
+						
+					</ul>
+				
+			</ul>

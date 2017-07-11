@@ -1,0 +1,40 @@
+<h2>Sign up</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+   
+
+
+
+     <%= f.text_field :first_name, placeholder: "First Name" %>
+  
+   <%= f.text_field :last_name, placeholder: "Last Name" %>
+
+    <%= f.input :email, required: true  %>
+    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+    <%= f.input :password_confirmation, required: true %>
+
+    <%= f.input :phone, placeholder: "(xxx) xxx-xxxx" %>
+
+    <%= f.input :status , collection: ["Hiring", "Looking for Work"] , as: :radio_buttons, :item_wrapper_class => 
+    "inline",  class: "radio-inline"%>
+
+    
+ <%= f.input :level , collection: ["Junior", "Mid", "Senior"] , as: :radio_buttons, class: "radio-inline"%>
+   
+
+
+
+   <%= f.text_area :comments, placeholder: "Add your skills, experience & github link, etc here", class: "textarea" %>
+
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Sign up" %>
+  </div>
+<% end %>
+
+

@@ -1,0 +1,3 @@
+class LookingForWork < User
+end
+
